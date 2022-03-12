@@ -2,9 +2,9 @@
   "name": "spa-converter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/lopo12123/spa-converter/issues"
   },
-  "homepage": "https://github.com/lopo12123/spa-converter#readme"
+  "homepage": "https://github.com/lopo12123/spa-converter#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.40",
+    "@types/uuid": "^8.3.4",
+    "react": "^17.0.2"
+  }
 }
