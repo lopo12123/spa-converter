@@ -11,6 +11,8 @@ export default defineConfig({
             entry: resolve(__dirname, './src/main.tsx'),
             formats: [ 'es' ],
             fileName: () => 'main.js'
-        }
+        },
+        outDir: "../../dist/packages/vite-react-ts",
+        emptyOutDir: false
     }
 })

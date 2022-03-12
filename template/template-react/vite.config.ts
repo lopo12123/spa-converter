@@ -16,4 +16,8 @@ export default defineConfig({
             "@vite-vue-ts-src": "/packages/vite-vue-ts/src",
         }
     },
+    build: {
+        outDir: "./dist",
+        emptyOutDir: true
+    }
 })
