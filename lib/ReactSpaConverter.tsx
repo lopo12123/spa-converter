@@ -146,19 +146,13 @@ export function ReactSpaConverter(converterProp: SpaConverterProp): JSX.Element 
     const spa = spaMethodRef.current
 
     // 返回子应用的容器
-    // return (errMsg !== '')
-    //             ? errorDisplay
-    //                 ? containerDom(errorDisplay(errMsg))
-    //                 : containerDom(errMsg)
-    //             : converterLoading
-    //                 ? loadingDisplay
-    //                     ? containerDom(loadingDisplay)
-    //                     : containerDom('[Sub Spa] Converter is preparing.')
-    //                 : (spa && spa.mount )
-    //                     ? containerDom((spa.mount(deepProps)+'').slice(0, 0))
-    //                     : containerDom('[Sub Spa] This Sub-app has no content.')
     return (
-        <div { ...props } id={ containerId }>
+        <div { ...props } id={ containerId }
+             style={ {
+                 position: 'relative',
+                 width: '100%',
+                 height: '100%'
+             } }>
             {
                 errMsg !== ''
                     ? errorDisplay
