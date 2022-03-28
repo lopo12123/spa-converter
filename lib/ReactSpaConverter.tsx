@@ -107,7 +107,7 @@ export function ReactSpaConverter(converterProp: SpaConverterProp): JSX.Element 
 
     // 仅执行一次 once
     useLayoutEffect(() => {
-        console.log(entryPath)
+        console.log(`[Sub Spa] is going to new path: "${entryPath}"`)
         const containerEl = document.getElementById(containerId) as HTMLDivElement
 
         if(!containerEl) {
@@ -151,7 +151,10 @@ export function ReactSpaConverter(converterProp: SpaConverterProp): JSX.Element 
              style={ {
                  position: 'relative',
                  width: '100%',
-                 height: '100%'
+                 height: '100%',
+                 display: 'flex',
+                 alignItems: 'center',
+                 justifyContent: 'center'
              } }>
             {
                 errMsg !== ''
